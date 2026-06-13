@@ -61,9 +61,12 @@ export default function AuthForm({ mode }: { mode: "login" | "signup" }) {
   return (
     <div className="mx-auto mt-16 max-w-sm px-4">
       <Link href="/" className="mb-8 flex items-center justify-center gap-2">
-        <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-600 font-bold text-white">
-          CP
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-mark.png"
+          alt="CarePhrase Communication Academy"
+          className="h-12 w-auto"
+        />
       </Link>
       <h1 className="text-center text-2xl font-bold text-slate-900">
         {isSignup ? "Create your account" : "Welcome back"}

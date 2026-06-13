@@ -18,11 +18,10 @@ export default function Nav({ email }: { email?: string | null }) {
     <header className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <Link href="/dashboard" className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-sm font-bold text-white">
-            CP
-          </span>
-          <span className="font-semibold text-slate-800">
-            CarePhrase Academy
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-mark.png" alt="" className="h-9 w-auto" />
+          <span className="text-sm font-semibold leading-tight text-slate-800 sm:text-base">
+            CarePhrase Communication Academy
           </span>
         </Link>
         <nav className="flex items-center gap-4 text-sm">

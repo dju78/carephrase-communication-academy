@@ -16,12 +16,13 @@ export default async function Home() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-16">
       <div className="text-center">
-        <span className="grid mx-auto h-14 w-14 place-items-center rounded-2xl bg-brand-600 text-lg font-bold text-white">
-          CP
-        </span>
-        <h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-          CarePhrase Communication Academy
-        </h1>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-full.png"
+          alt="CarePhrase Communication Academy"
+          className="mx-auto h-24 w-auto sm:h-28"
+        />
+        <h1 className="sr-only">CarePhrase Communication Academy</h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
           AI-powered communication training for UK health and social care
           staff. Practise real workplace scenarios by voice and get structured,
