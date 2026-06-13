@@ -28,7 +28,7 @@ export const MODULES: ModuleMeta[] = [
     description:
       "Practise escalating concerns using the Observation → Concern → Action Taken → Escalation Required framework.",
     accent: "from-emerald-500 to-emerald-700",
-    available: false,
+    available: true,
   },
   {
     id: "care-english",
@@ -84,6 +84,48 @@ export const SCENARIOS: Scenario[] = [
       "State the facts of what happened clearly.",
       "Avoid giving clinical advice — focus on communicating the concern.",
       "Be clear about what the next person needs to do.",
+    ],
+  },
+
+  // --- Module 2: Escalation Skills Academy ---
+  // Assessed with the framework: Observation → Concern → Action Taken → Escalation Required.
+  {
+    id: "fall",
+    moduleId: "escalation",
+    title: "Fall",
+    summary: "Escalate after finding a resident on the floor.",
+    prompt:
+      "You walk into Mr Joseph Bello's room and find him sitting on the floor beside his bed. He is conscious and talking but says his right hip hurts and he cannot get himself up. There is a small graze on his elbow, and you do not know how long he has been there. Verbally raise this with the nurse in charge using the escalation framework.",
+    context: [
+      "Do not try to move him yourself — focus on communicating the escalation.",
+      "Cover what you observed, your concern, what you have done, and what you need to happen.",
+      "Be clear about how urgent this is.",
+    ],
+  },
+  {
+    id: "refusal-of-care",
+    moduleId: "escalation",
+    title: "Refusal of care",
+    summary: "Escalate a resident's repeated refusal of essential care.",
+    prompt:
+      "Mrs Edith Crowe has refused personal care for the second day running and has now also refused to let you change a soiled continence pad. She is becoming tearful and says she 'just wants to be left alone'. You are concerned about her skin integrity and her dignity. Escalate this appropriately to the senior on shift.",
+    context: [
+      "Respect her right to refuse while still communicating your concern.",
+      "State what you observed, why you are concerned, what you have tried, and what support you need.",
+      "Avoid clinical conclusions — communicate the concern.",
+    ],
+  },
+  {
+    id: "sudden-confusion",
+    moduleId: "escalation",
+    title: "Sudden confusion",
+    summary: "Escalate a resident's sudden change in mental state.",
+    prompt:
+      "Mr Ahmed Khan, who is normally alert and chatty, has become suddenly confused this afternoon. He does not recognise you, is agitated, and keeps trying to leave the lounge. This is a marked change from how he was this morning. Escalate your concern to the nurse using the escalation framework.",
+    context: [
+      "Focus on what has changed and how quickly it happened.",
+      "Cover your observation, your concern, any action taken, and the escalation needed.",
+      "Convey the appropriate level of urgency.",
     ],
   },
 ];
