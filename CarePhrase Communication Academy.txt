@@ -1,0 +1,288 @@
+CarePhrase Communication Academy
+Professional Product Scope Document
+Product Overview
+
+CarePhrase Communication Academy is an AI-powered communication training platform designed for health and social care staff.
+
+The platform helps learners develop the communication skills required to deliver safe, person-centred, and professional care through realistic workplace simulations, structured feedback, guided practice, and scenario-based learning.
+
+The platform does not provide clinical advice, replace professional judgement, or generate official records. Its purpose is to improve communication competence, confidence, and decision-making in health and social care environments.
+
+Vision
+
+To become the leading communication skills training platform for health and social care professionals in the UK.
+
+Mission
+
+To help care workers communicate more clearly, confidently, safely, and professionally through practical, scenario-based learning.
+
+Problem Statement
+
+Many health and social care incidents are linked to communication failures rather than lack of technical knowledge.
+
+Common challenges include:
+
+Poor handovers
+Incomplete escalation of concerns
+Inconsistent safeguarding communication
+Difficulty communicating with families
+Lack of confidence during emergencies
+Language barriers for international staff
+Inexperienced staff struggling with professional communication
+Limited opportunities for realistic communication practice
+
+Existing training often focuses on compliance and theory rather than practical communication skills.
+
+Target Users
+Primary Users
+Support Workers
+Care Assistants
+Healthcare Assistants
+Senior Care Workers
+Domiciliary Care Staff
+Supported Living Staff
+Secondary Users
+Team Leaders
+Shift Leaders
+Care Coordinators
+Registered Managers
+Care Trainers
+Training Providers
+Future Users
+Nursing Students
+Student Social Workers
+Newly Qualified Nurses
+International Healthcare Workers
+Core Product Modules
+1. Handover Communication Academy
+
+Purpose:
+
+Train staff to deliver structured and effective handovers.
+
+Scenarios:
+
+End of shift handover
+Resident deterioration
+Medication concerns
+Behavioural changes
+Incident updates
+
+Assessment:
+
+Clarity
+Completeness
+Professional language
+Risk communication
+Structure
+2. Escalation Skills Academy
+
+Purpose:
+
+Teach staff how to raise concerns appropriately.
+
+Scenarios:
+
+Falls
+Pressure sores
+Refusal of care
+Medication refusal
+Mental health concerns
+Safeguarding concerns
+
+Learning Framework:
+
+Observation → Concern → Action Taken → Escalation Required
+
+3. Safeguarding Communication Academy
+
+Purpose:
+
+Build confidence in safeguarding conversations.
+
+Topics:
+
+Abuse disclosure
+Neglect concerns
+Financial abuse
+Emotional abuse
+Self-neglect
+Whistleblowing
+
+Assessment:
+
+Appropriate response
+Professional boundaries
+Information gathering
+Reporting procedures
+4. Family Communication Academy
+
+Purpose:
+
+Improve communication with relatives and representatives.
+
+Scenarios:
+
+Complaints
+Concerns about care
+Difficult conversations
+Managing expectations
+Providing updates
+
+Skills:
+
+Empathy
+Active listening
+Professional language
+Conflict management
+5. Emergency Communication Academy
+
+Purpose:
+
+Prepare staff for urgent situations.
+
+Scenarios:
+
+Medical emergencies
+Falls
+Choking incidents
+Missing residents
+Fire evacuation
+
+Frameworks:
+
+SBAR
+Emergency call communication
+Incident reporting communication
+6. Care English Academy
+
+Purpose:
+
+Support international workers.
+
+Topics:
+
+Care vocabulary
+Pronunciation
+Professional terminology
+Communication confidence
+Healthcare language
+
+Practice Areas:
+
+Speaking
+Listening
+Understanding accents
+Workplace conversations
+7. CQC Readiness Academy
+
+Purpose:
+
+Prepare staff for inspections.
+
+Practice Questions:
+
+Safeguarding
+Dignity and respect
+Person-centred care
+Mental Capacity Act
+Duty of Candour
+Infection Prevention and Control
+
+AI provides structured feedback.
+
+8. Leadership Communication Academy
+
+Purpose:
+
+Develop communication skills for senior staff.
+
+Topics:
+
+Delegation
+Supervision
+Team briefings
+Performance conversations
+Incident reviews
+
+Target Audience:
+
+Senior Carers
+Team Leaders
+Managers
+AI Features
+Real-Time Speaking Analysis
+
+Measures:
+
+Pace
+Clarity
+Confidence
+Filler words
+Professional language
+Scenario Simulator
+
+Users interact with realistic workplace situations.
+
+Examples:
+
+Concerned family member
+Resident refusing support
+Safeguarding disclosure
+Nurse handover
+Communication Scoring Engine
+
+Evaluates:
+
+Clarity
+Safety
+Professionalism
+Completeness
+Escalation awareness
+Personal Development Dashboard
+
+Tracks:
+
+Progress
+Communication scores
+Completed modules
+Learning recommendations
+Compliance Positioning
+
+The platform is:
+
+✅ Training tool
+
+✅ Professional development tool
+
+✅ Communication skills platform
+
+✅ Workforce development solution
+
+The platform is not:
+
+❌ Clinical decision support software
+
+❌ Electronic care record system
+
+❌ Care plan software
+
+❌ Medical device
+
+❌ Replacement for professional judgement
+
+Revenue Model
+Individual Subscription
+£4.99–£9.99 per month
+Care Provider Subscription
+Per user licensing
+Team dashboard
+Training analytics
+Training Provider Licence
+White-label deployment
+Academy integration
+Long-Term Vision
+
+CarePhrase Communication Academy becomes the communication equivalent of language-learning platforms, but specifically for health and social care professionals.
+
+Rather than teaching a foreign language, it teaches the language of safe, professional, person-centred care communication.

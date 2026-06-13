@@ -1,0 +1,99 @@
+1. Product Vision (for investors, partners, and stakeholders)
+
+Keep the full document as it is.
+
+This explains:
+
+What the product does
+Why it exists
+Target users
+Long-term roadmap
+2. MVP Scope (for the developer)
+
+MVP Version 1
+Module 1: Handover Communication Academy
+
+Scenarios:
+
+End-of-shift handover
+Resident deterioration
+Medication concern
+
+Features:
+
+Voice recording
+Speech-to-text
+AI feedback
+Scorecard
+Learning tips
+Module 2: Escalation Skills Academy
+
+Scenarios:
+
+Fall
+Refusal of care
+Sudden confusion
+
+Features:
+
+Voice response
+AI assessment
+Escalation scoring
+Module 3: Care English Academy
+
+Features:
+
+Healthcare vocabulary
+Pronunciation practice
+Communication confidence
+User Dashboard
+Total score
+Completed scenarios
+Progress tracking
+
+This alone is enough for a pilot.
+
+3. Technical Specification (for the developer)
+
+Give them something like:
+
+User Roles
+Learner
+Supervisor (future release)
+Administrator
+Core Workflow
+User selects module
+User reads scenario
+User records response
+Speech converts to text
+AI analyses response
+Feedback generated
+Score saved
+Progress updated
+Technology
+
+Frontend:
+
+Next.js
+React
+Tailwind
+
+Backend:
+
+Node.js
+
+Database:
+
+PostgreSQL or Supabase
+
+AI:
+
+OpenAI API
+
+Speech:
+
+Whisper API
+
+Hosting:
+
+Vercel
