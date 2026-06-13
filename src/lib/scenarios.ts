@@ -140,11 +140,24 @@ export const SCENARIOS: Scenario[] = [
 
   // --- Module 3: Safeguarding Communication Academy ---
   // Assessed on: appropriate response, professional boundaries, information
-  // gathering, and reporting procedures.
+  // gathering, and reporting procedures (mapped to the five dashboard scores).
   {
-    id: "abuse-disclosure",
+    id: "unexplained-bruising",
     moduleId: "safeguarding",
-    title: "Abuse disclosure",
+    title: "Unexplained bruising",
+    summary: "Report unexplained bruising noticed during personal care.",
+    prompt:
+      "During personal care you notice fresh bruising on Mrs Joan Carter's upper arms and back that was not there yesterday and that she cannot explain. She becomes withdrawn and avoids eye contact when you gently ask about it. Communicate this safeguarding concern to your safeguarding lead — describe what you observed and what you would do.",
+    context: [
+      "State the factual observations only — what you saw and where.",
+      "Do not investigate or ask the resident leading questions.",
+      "Be clear about recording the facts and reporting to the safeguarding lead.",
+    ],
+  },
+  {
+    id: "disclosure-of-abuse",
+    moduleId: "safeguarding",
+    title: "Disclosure of abuse",
     summary: "Respond to a resident beginning to disclose possible abuse.",
     prompt:
       "While you are helping Mrs Grace Whitfield with her lunch, she becomes quiet and says, 'One of the night staff is rough with me, but please don't tell anyone — I don't want any trouble.' Respond to her, and then explain what you would do next and who you would tell.",
@@ -155,35 +168,9 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    id: "self-neglect",
-    moduleId: "safeguarding",
-    title: "Self-neglect",
-    summary: "Raise a concern about a resident neglecting their own care.",
-    prompt:
-      "Mr Derek Hollis, who lives in supported living, has over the past fortnight been declining to wash, change his clothes, or let carers clean his flat, and there are now concerns for his health and safety. Raise this safeguarding concern with your manager, communicating what you have observed and why you are worried.",
-    context: [
-      "Describe the specific facts you have observed over time.",
-      "Respect his autonomy while clearly communicating the genuine risk.",
-      "Be clear about who you are reporting to and what you would record.",
-    ],
-  },
-  {
-    id: "whistleblowing",
-    moduleId: "safeguarding",
-    title: "Whistleblowing",
-    summary: "Raise concerns about a colleague's unsafe practice.",
-    prompt:
-      "Over several shifts you have seen a colleague repeatedly ignore call bells, speak harshly to residents, and rush personal care. You are worried about residents' safety and dignity. Raise your concerns through the proper channel — explain what you have witnessed and what you are asking to happen.",
-    context: [
-      "Stick to specific facts you have witnessed yourself.",
-      "Use professional, non-accusatory language.",
-      "Be clear about who you are reporting to and why it matters for residents.",
-    ],
-  },
-  {
     id: "financial-abuse",
     moduleId: "safeguarding",
-    title: "Financial abuse",
+    title: "Financial abuse concern",
     summary: "Report possible financial exploitation of a resident.",
     prompt:
       "You have noticed that Mrs Irene Patel's relative has been taking money from her purse and pressuring her to hand over her bank card, and Mrs Patel seems anxious whenever he visits. Report this possible financial abuse to your safeguarding lead, communicating what you have observed and your concern.",
@@ -191,6 +178,33 @@ export const SCENARIOS: Scenario[] = [
       "Describe the specific things you have observed.",
       "Do not confront the relative or investigate it yourself.",
       "Be clear about reporting to the safeguarding lead and recording the facts.",
+    ],
+  },
+  {
+    id: "neglect-concern",
+    moduleId: "safeguarding",
+    title: "Neglect concern",
+    summary: "Raise a concern that a person is being neglected by others.",
+    prompt:
+      "You visit Mr Albert Reilly, who is cared for at home by a family member. You find him in a soiled bed with his pressure-relief mattress switched off, there is no food in the house, and he tells you he has not been helped to wash for several days. Raise this neglect concern with your safeguarding lead — describe what you observed and why you are worried.",
+    context: [
+      "Describe the specific things you observed on the visit.",
+      "Do not confront the family member or investigate it yourself.",
+      "Be clear about reporting to the safeguarding lead and recording the facts.",
+    ],
+  },
+  {
+    id: "professional-boundaries",
+    moduleId: "safeguarding",
+    title: "Professional boundaries concern",
+    summary:
+      "Raise a concern about a colleague crossing professional boundaries.",
+    prompt:
+      "You have seen a colleague accepting cash gifts from a resident, giving the resident their personal phone number, and offering to run errands for them outside of work. You are concerned these blurred boundaries put the resident at risk of exploitation. Raise your concern through the proper channel — explain what you have seen and what you are asking to happen.",
+    context: [
+      "Stick to the specific facts you have witnessed yourself.",
+      "Use professional, non-accusatory language.",
+      "Be clear about who you are reporting to and why it matters for the resident.",
     ],
   },
 ];
