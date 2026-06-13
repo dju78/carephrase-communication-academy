@@ -46,7 +46,7 @@ export const MODULES: ModuleMeta[] = [
     description:
       "Vocabulary, pronunciation and confidence practice with short AI feedback on language and terminology use.",
     accent: "from-amber-500 to-amber-700",
-    available: false,
+    available: true,
   },
 ];
 
@@ -205,6 +205,89 @@ export const SCENARIOS: Scenario[] = [
       "Stick to the specific facts you have witnessed yourself.",
       "Use professional, non-accusatory language.",
       "Be clear about who you are reporting to and why it matters for the resident.",
+    ],
+  },
+
+  // --- Module 4: Care English Academy ---
+  // Short speaking exercises across healthcare vocabulary, pronunciation
+  // (read-aloud), communication confidence, and professional terminology.
+  // Assessed with the same 5 dashboard dimensions, framed for language use.
+  {
+    id: "vocab-continence",
+    moduleId: "care-english",
+    title: "Vocabulary: 'continence'",
+    summary: "Use the term 'continence' correctly in a spoken sentence.",
+    prompt:
+      "Healthcare vocabulary practice. Say one clear, complete sentence you might use at work that correctly uses the word \"continence\" — for example, when supporting a resident with continence care. Speak in full, professional language.",
+    context: [
+      "Use the target word naturally and correctly.",
+      "Speak a full sentence, not just the word.",
+      "Aim for clear, professional phrasing.",
+    ],
+  },
+  {
+    id: "vocab-pressure-area",
+    moduleId: "care-english",
+    title: "Vocabulary: 'pressure area'",
+    summary: "Use the term 'pressure area' correctly in a spoken sentence.",
+    prompt:
+      "Healthcare vocabulary practice. Say one clear sentence you might use during care or a handover that correctly uses the term \"pressure area\" — for example, reporting skin you have checked. Use full, professional language.",
+    context: [
+      "Use the target term correctly and in context.",
+      "Speak a complete sentence.",
+      "Keep it clear and professional.",
+    ],
+  },
+  {
+    id: "pronounce-paracetamol",
+    moduleId: "care-english",
+    title: "Pronunciation: 'paracetamol'",
+    summary: "Read a phrase aloud clearly, focusing on a tricky term.",
+    prompt:
+      'Pronunciation practice. Read this phrase aloud, clearly and at a steady pace:\n\n"I have given Mrs Allen her prescribed paracetamol and recorded it on the medication chart."\n\nFocus on saying every word clearly, especially "paracetamol" and "medication".',
+    context: [
+      "Read the phrase exactly as written.",
+      "Speak slowly and finish each word.",
+      "Your transcript is shown afterwards so you can compare it with the phrase.",
+    ],
+  },
+  {
+    id: "pronounce-catheter",
+    moduleId: "care-english",
+    title: "Pronunciation: 'catheter'",
+    summary: "Read a phrase aloud clearly, focusing on a tricky term.",
+    prompt:
+      'Pronunciation practice. Read this phrase aloud, clearly and at a steady pace:\n\n"The resident\'s catheter bag was emptied and the output was documented."\n\nFocus on clear pronunciation of "catheter" and "documented".',
+    context: [
+      "Read the phrase exactly as written.",
+      "Speak slowly and clearly.",
+      "Your transcript is shown afterwards so you can compare it with the phrase.",
+    ],
+  },
+  {
+    id: "confidence-greeting",
+    moduleId: "care-english",
+    title: "Confidence: greeting a new resident",
+    summary: "Confidently introduce yourself to a new resident.",
+    prompt:
+      "Communication confidence practice. A new resident has just arrived. Introduce yourself warmly and confidently — say who you are and your role, and reassure them. Speak as you would to them.",
+    context: [
+      "Speak warmly and at a steady pace.",
+      "Introduce yourself and your role clearly.",
+      "Aim to sound calm and confident.",
+    ],
+  },
+  {
+    id: "terminology-observation",
+    moduleId: "care-english",
+    title: "Terminology: describing an observation",
+    summary: "Describe an observation in precise professional language.",
+    prompt:
+      "Professional terminology practice. In clear, professional language, describe this observation as you would in a handover: a resident's skin on their heel is red and does not fade when pressed. Use precise, professional terms.",
+    context: [
+      "Use precise, professional terminology.",
+      "Be factual and clear.",
+      "Keep it concise, as in a real handover.",
     ],
   },
 ];
