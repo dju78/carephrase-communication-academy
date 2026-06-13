@@ -264,30 +264,137 @@ export const SCENARIOS: Scenario[] = [
       "Your transcript is shown afterwards so you can compare it with the phrase.",
     ],
   },
+  // Care phrases — practise the key phrases used in each care context.
   {
-    id: "confidence-greeting",
+    id: "phrases-personal-care",
     moduleId: "care-english",
-    title: "Confidence: greeting a new resident",
-    summary: "Confidently introduce yourself to a new resident.",
+    title: "Phrases: Personal care",
+    summary: "Practise polite, clear phrases for supporting personal care.",
     prompt:
-      "Communication confidence practice. A new resident has just arrived. Introduce yourself warmly and confidently — say who you are and your role, and reassure them. Speak as you would to them.",
+      "Personal care phrases. You are about to help a resident with washing and dressing. Say two or three polite, clear phrases you would use to explain what you are going to do and to offer them choice and preserve their dignity.",
     context: [
-      "Speak warmly and at a steady pace.",
-      "Introduce yourself and your role clearly.",
-      "Aim to sound calm and confident.",
+      "Use respectful, reassuring language.",
+      "Offer choice and maintain dignity.",
+      "Speak clearly and at a steady pace.",
     ],
   },
   {
-    id: "terminology-observation",
+    id: "phrases-handover",
     moduleId: "care-english",
-    title: "Terminology: describing an observation",
-    summary: "Describe an observation in precise professional language.",
+    title: "Phrases: Handover",
+    summary: "Practise key phrases used when giving a handover.",
     prompt:
-      "Professional terminology practice. In clear, professional language, describe this observation as you would in a handover: a resident's skin on their heel is red and does not fade when pressed. Use precise, professional terms.",
+      "Handover phrases. Say two or three clear phrases you would use during a shift handover to introduce a resident and summarise their day — for example, opening the handover and flagging anything the next shift should watch.",
     context: [
-      "Use precise, professional terminology.",
-      "Be factual and clear.",
-      "Keep it concise, as in a real handover.",
+      "Use clear, structured phrasing.",
+      "Be concise and professional.",
+      "Include an opening and a point to watch.",
+    ],
+  },
+  {
+    id: "phrases-escalation",
+    moduleId: "care-english",
+    title: "Phrases: Escalation",
+    summary: "Practise phrases for raising a concern to a senior.",
+    prompt:
+      "Escalation phrases. Say two or three clear phrases you would use to raise a concern with a senior colleague — for example, stating what you have observed and asking them to review the resident.",
+    context: [
+      "State the concern clearly and factually.",
+      "Make clear what you are asking for.",
+      "Convey the appropriate urgency.",
+    ],
+  },
+  {
+    id: "phrases-safeguarding",
+    moduleId: "care-english",
+    title: "Phrases: Safeguarding",
+    summary: "Practise phrases for responding to a safeguarding concern.",
+    prompt:
+      "Safeguarding phrases. Say two or three appropriate phrases you would use if a resident began to tell you about possible abuse — for example, reassuring them while being honest that you cannot keep it a secret.",
+    context: [
+      "Be reassuring, but never promise secrecy.",
+      "Use calm, non-judgemental language.",
+      "Make clear you will get the right help.",
+    ],
+  },
+  {
+    id: "phrases-emergency",
+    moduleId: "care-english",
+    title: "Phrases: Emergency",
+    summary: "Practise clear, urgent phrases for an emergency.",
+    prompt:
+      "Emergency phrases. A resident has collapsed. Say two or three clear, urgent phrases you would use to call for help and direct a colleague — for example, summoning the nurse and asking someone to bring equipment or call an ambulance.",
+    context: [
+      "Speak clearly and with urgency.",
+      "Give direct, specific instructions.",
+      "Stay calm and audible.",
+    ],
+  },
+
+  // Workplace conversation practice — realistic spoken care conversations.
+  {
+    id: "convo-resident",
+    moduleId: "care-english",
+    title: "Conversation: Speaking to a resident",
+    summary: "Have a warm, respectful conversation with a resident.",
+    prompt:
+      "Workplace conversation practice. A resident seems a little low this morning. Speak to them warmly: greet them, ask how they are, and offer some gentle reassurance or support. Speak as you would to them.",
+    context: [
+      "Be warm, patient and respectful.",
+      "Listen and respond to how they feel.",
+      "Keep your language clear and kind.",
+    ],
+  },
+  {
+    id: "convo-family",
+    moduleId: "care-english",
+    title: "Conversation: Speaking to a family member",
+    summary: "Update a resident's relative professionally and warmly.",
+    prompt:
+      "Workplace conversation practice. A resident's daughter asks how her mother has been today. Give her a warm, professional update — mention how her mother is and reassure her appropriately, without sharing anything you should not.",
+    context: [
+      "Be warm, professional and reassuring.",
+      "Share appropriate, factual information.",
+      "Maintain confidentiality and professional boundaries.",
+    ],
+  },
+  {
+    id: "convo-handover",
+    moduleId: "care-english",
+    title: "Conversation: Giving a handover",
+    summary: "Give a short spoken handover to a colleague.",
+    prompt:
+      "Workplace conversation practice. Give a short verbal handover to the colleague taking over from you: say who the resident is, how their day went, and anything the next shift should keep an eye on.",
+    context: [
+      "Be clear and well structured.",
+      "Cover who, what happened, and what to watch.",
+      "Keep it concise and professional.",
+    ],
+  },
+  {
+    id: "convo-escalation",
+    moduleId: "care-english",
+    title: "Conversation: Escalating to a senior carer",
+    summary: "Escalate a concern to a senior carer in conversation.",
+    prompt:
+      "Workplace conversation practice. You are worried a resident is more unwell than usual. Speak to the senior carer: describe what you have noticed, say why you are concerned, and ask them to review the resident.",
+    context: [
+      "Describe your observation and concern clearly.",
+      "Be specific and factual.",
+      "Make clear what you are asking them to do.",
+    ],
+  },
+  {
+    id: "convo-emergency",
+    moduleId: "care-english",
+    title: "Conversation: Calling for help in an emergency",
+    summary: "Call for help clearly during an emergency.",
+    prompt:
+      "Workplace conversation practice. A resident has fallen and is not responding well. Call for help out loud: summon assistance, say clearly what has happened and where, and state exactly what you need — for example, asking someone to call the nurse or an ambulance.",
+    context: [
+      "Speak loudly, clearly and with urgency.",
+      "Say what has happened and where.",
+      "State exactly what help you need.",
     ],
   },
 ];
