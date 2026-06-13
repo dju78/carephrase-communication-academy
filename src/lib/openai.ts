@@ -54,6 +54,12 @@ const MODULE_FRAMEWORK: Record<ModuleId, string> = {
   escalation: `This is an ESCALATION scenario. Assess the response against the framework: Observation → Concern → Action Taken → Escalation Required.
 A strong answer (1) states clear, factual OBSERVATIONS; (2) explains the CONCERN and why it matters; (3) describes the ACTION TAKEN so far; and (4) makes explicit what ESCALATION is required — to whom and how urgently.
 Map the framework onto the five scores: completeness = how many of the four O-C-A-E elements are present and detailed; structure = a logical O→C→A→E flow; safetyAwareness = recognising urgency/risk and escalating to the right person promptly. Name any missing element in the feedback.`,
+  safeguarding: `This is a SAFEGUARDING scenario. Assess the response against good safeguarding communication practice:
+- APPROPRIATE RESPONSE: stay calm, listen, reassure, take the concern seriously, and never promise to keep a disclosure secret.
+- PROFESSIONAL BOUNDARIES: do not investigate, interrogate, lead the person, or confront an alleged abuser.
+- INFORMATION GATHERING: note the facts in the person's own words without asking leading questions.
+- REPORTING PROCEDURES: report to the right person (safeguarding lead/manager) promptly and record factually.
+Map onto the five scores: completeness = how many of these four elements are covered; safetyAwareness = recognising the risk and the duty to report and act; structure = a calm, logical flow; professionalLanguage = respectful, non-judgemental language and appropriate boundaries; clarity = how clearly the concern is communicated. Name any missing element in the feedback.`,
   "care-english": `This is a CARE ENGLISH scenario. Assess clarity of speech, correct use of healthcare vocabulary and professional terminology, and overall communication confidence.`,
 };
 
@@ -193,6 +199,19 @@ const MOCK_CONTENT: Record<
       "Follow the framework in order: Observation → Concern → Action Taken → Escalation Required.",
       "Be explicit about the action you have already taken before asking for help.",
       "State clearly who you need to escalate to and how urgently, e.g. 'I need the nurse to review him now'.",
+    ],
+  },
+  safeguarding: {
+    summary:
+      "Your response showed you took the concern seriously and communicated respectfully. Being explicit that you would not promise secrecy, recording the facts in the person's own words, and stating exactly who you would report to would make it stronger.",
+    strengths: [
+      "You responded calmly and took the concern seriously.",
+      "You used respectful, non-judgemental language.",
+    ],
+    learningTips: [
+      "Reassure the person and listen, but never promise to keep a disclosure secret.",
+      "Record the facts in the person's own words — don't investigate, lead, or ask probing questions.",
+      "Be explicit about reporting: tell your safeguarding lead or manager promptly and document factually.",
     ],
   },
   "care-english": {

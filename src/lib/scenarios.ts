@@ -31,6 +31,15 @@ export const MODULES: ModuleMeta[] = [
     available: true,
   },
   {
+    id: "safeguarding",
+    title: "Safeguarding Communication Academy",
+    tagline: "Handle safeguarding concerns confidently",
+    description:
+      "Practise responding to disclosures and raising safeguarding concerns — assessed on appropriate response, professional boundaries, information gathering and reporting procedures.",
+    accent: "from-rose-500 to-rose-700",
+    available: true,
+  },
+  {
     id: "care-english",
     title: "Care English Academy",
     tagline: "Build healthcare communication confidence",
@@ -126,6 +135,62 @@ export const SCENARIOS: Scenario[] = [
       "Focus on what has changed and how quickly it happened.",
       "Cover your observation, your concern, any action taken, and the escalation needed.",
       "Convey the appropriate level of urgency.",
+    ],
+  },
+
+  // --- Module 3: Safeguarding Communication Academy ---
+  // Assessed on: appropriate response, professional boundaries, information
+  // gathering, and reporting procedures.
+  {
+    id: "abuse-disclosure",
+    moduleId: "safeguarding",
+    title: "Abuse disclosure",
+    summary: "Respond to a resident beginning to disclose possible abuse.",
+    prompt:
+      "While you are helping Mrs Grace Whitfield with her lunch, she becomes quiet and says, 'One of the night staff is rough with me, but please don't tell anyone — I don't want any trouble.' Respond to her, and then explain what you would do next and who you would tell.",
+    context: [
+      "Take what she says seriously and respond with care.",
+      "Do not promise to keep it secret, and do not investigate it yourself.",
+      "Be clear about what you would record and who you would report to.",
+    ],
+  },
+  {
+    id: "self-neglect",
+    moduleId: "safeguarding",
+    title: "Self-neglect",
+    summary: "Raise a concern about a resident neglecting their own care.",
+    prompt:
+      "Mr Derek Hollis, who lives in supported living, has over the past fortnight been declining to wash, change his clothes, or let carers clean his flat, and there are now concerns for his health and safety. Raise this safeguarding concern with your manager, communicating what you have observed and why you are worried.",
+    context: [
+      "Describe the specific facts you have observed over time.",
+      "Respect his autonomy while clearly communicating the genuine risk.",
+      "Be clear about who you are reporting to and what you would record.",
+    ],
+  },
+  {
+    id: "whistleblowing",
+    moduleId: "safeguarding",
+    title: "Whistleblowing",
+    summary: "Raise concerns about a colleague's unsafe practice.",
+    prompt:
+      "Over several shifts you have seen a colleague repeatedly ignore call bells, speak harshly to residents, and rush personal care. You are worried about residents' safety and dignity. Raise your concerns through the proper channel — explain what you have witnessed and what you are asking to happen.",
+    context: [
+      "Stick to specific facts you have witnessed yourself.",
+      "Use professional, non-accusatory language.",
+      "Be clear about who you are reporting to and why it matters for residents.",
+    ],
+  },
+  {
+    id: "financial-abuse",
+    moduleId: "safeguarding",
+    title: "Financial abuse",
+    summary: "Report possible financial exploitation of a resident.",
+    prompt:
+      "You have noticed that Mrs Irene Patel's relative has been taking money from her purse and pressuring her to hand over her bank card, and Mrs Patel seems anxious whenever he visits. Report this possible financial abuse to your safeguarding lead, communicating what you have observed and your concern.",
+    context: [
+      "Describe the specific things you have observed.",
+      "Do not confront the relative or investigate it yourself.",
+      "Be clear about reporting to the safeguarding lead and recording the facts.",
     ],
   },
 ];

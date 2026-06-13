@@ -1,6 +1,10 @@
 // Shared domain types for CarePhrase Communication Academy (MVP).
 
-export type ModuleId = "handover" | "escalation" | "care-english";
+export type ModuleId =
+  | "handover"
+  | "escalation"
+  | "safeguarding"
+  | "care-english";
 
 export interface Scenario {
   id: string;
