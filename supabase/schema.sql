@@ -74,3 +74,14 @@ drop policy if exists "Users can insert own attempts" on public.attempts;
 create policy "Users can insert own attempts"
   on public.attempts for insert
   with check (auth.uid() = user_id);
+
+-- ---------------------------------------------------------------------------
+-- Role grants.
+-- RLS policies decide WHICH rows a user sees; the role still needs table-level
+-- privileges to touch the table at all. We grant only to `authenticated` —
+-- logged-out (`anon`) users have no access to either table by design.
+-- (Safe to run repeatedly; harmless if the grants already exist.)
+-- ---------------------------------------------------------------------------
+grant usage on schema public to authenticated;
+grant select, insert, update on public.profiles to authenticated;
+grant select, insert on public.attempts to authenticated;
