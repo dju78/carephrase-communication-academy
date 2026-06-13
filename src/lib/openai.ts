@@ -19,12 +19,19 @@ export async function transcribeAudio(file: File): Promise<string> {
   if (!client) {
     return mockTranscript();
   }
-  const result = await client.audio.transcriptions.create({
-    file,
-    model: TRANSCRIBE_MODEL,
-    language: "en",
-  });
-  return result.text.trim();
+  try {
+    const result = await client.audio.transcriptions.create({
+      file,
+      model: TRANSCRIBE_MODEL,
+      language: "en",
+    });
+    return result.text.trim();
+  } catch (err) {
+    // Bad key, no credits, rate limit, or any API error: fall back to mock so
+    // the learner's session never hard-fails.
+    console.error("Whisper transcription failed — falling back to mock:", err);
+    return mockTranscript();
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -75,19 +82,26 @@ ${transcript}
 
 Assess this response against the scenario and return the JSON.`;
 
-  const completion = await client.chat.completions.create({
-    model: FEEDBACK_MODEL,
-    temperature: 0.3,
-    response_format: { type: "json_object" },
-    messages: [
-      { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: userPrompt },
-    ],
-  });
+  try {
+    const completion = await client.chat.completions.create({
+      model: FEEDBACK_MODEL,
+      temperature: 0.3,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userPrompt },
+      ],
+    });
 
-  const raw = completion.choices[0]?.message?.content ?? "{}";
-  const parsed = JSON.parse(raw) as Partial<Feedback>;
-  return normaliseFeedback(parsed);
+    const raw = completion.choices[0]?.message?.content ?? "{}";
+    const parsed = JSON.parse(raw) as Partial<Feedback>;
+    return normaliseFeedback(parsed);
+  } catch (err) {
+    // Bad key, no credits, rate limit, malformed JSON, or any API error:
+    // fall back to mock feedback so the learner still gets a result.
+    console.error("OpenAI feedback failed — falling back to mock:", err);
+    return mockFeedback(transcript);
+  }
 }
 
 /** Clamp and fill any missing fields so the UI always gets a valid shape. */
