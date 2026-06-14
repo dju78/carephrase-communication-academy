@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-// Primary site URL. Defaults to the Vercel URL; set NEXT_PUBLIC_SITE_URL in
-// Vercel to https://comms.carephrase.com once the custom domain is live —
-// metadataBase and OG image URLs then follow with no code change.
+// Primary site URL for metadataBase, Open Graph and canonical links.
+// comms.carephrase.com is the production domain; NEXT_PUBLIC_SITE_URL can
+// override it (e.g. for preview/staging deployments).
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://carephrase-communication-academy.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://comms.carephrase.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
