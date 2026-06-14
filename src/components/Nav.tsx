@@ -20,8 +20,8 @@ export default function Nav({ email }: { email?: string | null }) {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <Link href="/dashboard" className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-mark.png" alt="" className="h-9 w-auto" />
-          <span className="text-sm font-semibold leading-tight text-slate-800 sm:text-base">
+          <img src="/logo-mark.png" alt="CarePhrase Communication Academy" className="h-9 w-auto" />
+          <span className="hidden text-sm font-semibold leading-tight text-slate-800 sm:inline sm:text-base">
             CarePhrase Communication Academy
           </span>
         </Link>

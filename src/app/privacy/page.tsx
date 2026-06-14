@@ -17,29 +17,47 @@ export default function PrivacyPage() {
       <div className="mt-6 space-y-4 text-slate-600">
         <p>
           This is the pilot privacy notice for CarePhrase Communication Academy,
-          a product of Daramola Digital Labs.
+          a product of Daramola Digital Labs. CarePhrase Communication Academy
+          is a communication <strong>training platform only</strong>.
         </p>
 
         <h2 className="pt-2 font-semibold text-slate-800">What we store</h2>
         <p>
           When you create an account we store your name and email address. When
-          you complete an exercise we store the text transcription of your
-          spoken response, your scores, and the feedback generated. Audio is
-          processed only to produce the transcription and is not stored.
+          you complete an exercise we store the written transcription of your
+          spoken response, your scores, and the feedback generated. Your audio
+          is transcribed to produce that text and is not itself stored.
         </p>
 
-        <h2 className="pt-2 font-semibold text-slate-800">How it is used</h2>
+        <h2 className="pt-2 font-semibold text-slate-800">
+          How your responses are processed
+        </h2>
         <p>
-          Your data is used solely to provide your training feedback and your
-          progress dashboard. It is private to your account, protected by
-          row-level security, and is not sold or shared.
+          Your spoken response is transcribed into text so we can give you
+          training feedback. That transcript and any written responses may be
+          sent to OpenAI, which processes them to generate your feedback. They
+          are used only to provide your feedback and progress dashboard — your
+          data is private to your account, protected by row-level security, and
+          is not sold or shared for other purposes.
         </p>
 
-        <h2 className="pt-2 font-semibold text-slate-800">Important</h2>
+        <h2 className="pt-2 font-semibold text-slate-800">
+          Do not enter real patient information
+        </h2>
         <p>
-          CarePhrase is a training tool only. It is not a care record system.
-          Please do not enter real, identifiable resident or patient information
-          when recording your responses.
+          Please <strong>do not enter real, patient- or resident-identifiable
+          information</strong> when recording your responses. Use the scenario
+          details provided, or made-up examples, only.
+        </p>
+
+        <h2 className="pt-2 font-semibold text-slate-800">
+          What this platform is not
+        </h2>
+        <p>
+          CarePhrase Communication Academy is not a care record system, a
+          clinical decision-support tool, or a medical device. It does not
+          replace your employer&rsquo;s policies, safeguarding procedures or
+          your professional judgement — always follow those.
         </p>
 
         <p className="text-sm text-slate-500">
