@@ -12,6 +12,9 @@ export default function Footer() {
           Professional communication training for health and social care staff.
         </p>
 
+        <p className="mt-3">A product of Daramola Digital Labs</p>
+        <p className="mt-1 text-slate-400">comms.carephrase.com</p>
+
         <nav className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-slate-600">
           <Link href="/contact" className="hover:text-slate-900 hover:underline">
             Contact Us
@@ -29,20 +32,20 @@ export default function Footer() {
             •
           </span>
           <Link href="/privacy" className="hover:text-slate-900 hover:underline">
-            Privacy Policy
+            Privacy
           </Link>
         </nav>
 
         <p className="mx-auto mt-6 max-w-2xl text-xs leading-relaxed text-slate-400">
-          CarePhrase is a communication training tool designed to help learners
-          improve how they observe, record and escalate information. It is not a
-          care record system, does not provide clinical advice, and does not
-          replace employer policies, professional judgement, safeguarding
-          procedures or supervision.
+          CarePhrase Communication Academy is a communication training tool. It
+          is not a care record system, clinical decision-support tool, or
+          medical device. Users should always follow their organisation&rsquo;s
+          policies, safeguarding procedures and professional judgement.
         </p>
 
-        <p className="mt-6 text-xs text-slate-400">
-          © 2026 Daramola Digital Labs. All rights reserved. · Pilot Version 1.0
+        <p className="mt-6 text-xs text-slate-400">Version 1.0 Pilot</p>
+        <p className="mt-1 text-xs text-slate-400">
+          © 2026 Daramola Digital Labs. All rights reserved.
         </p>
       </div>
     </footer>
