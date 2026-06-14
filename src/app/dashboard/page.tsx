@@ -121,6 +121,22 @@ export default async function DashboardPage() {
           </a>
         </section>
 
+        {/* Install (PWA) */}
+        <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-lg font-semibold text-slate-800">
+            Install CarePhrase
+          </h2>
+          <p className="mt-1 text-slate-600">
+            Add CarePhrase Communication Academy to your phone for quick access.
+          </p>
+          <Link
+            href="/install"
+            className="mt-4 inline-block rounded-full border border-brand-600 px-5 py-2.5 font-medium text-brand-700 hover:bg-brand-50"
+          >
+            How to install
+          </Link>
+        </section>
+
         {/* Recommendations */}
         {recommendations.length > 0 && (
           <section className="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-6">
