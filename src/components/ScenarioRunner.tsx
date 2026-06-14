@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import VoiceRecorder from "./VoiceRecorder";
 import FeedbackCard from "./FeedbackCard";
 import Disclaimer from "./Disclaimer";
-import { exampleFor } from "@/lib/scenarios";
+import { exampleFor, getModule } from "@/lib/scenarios";
 import type { Feedback, Scenario } from "@/lib/types";
 
 type Phase = "record" | "processing" | "result";
@@ -113,6 +113,28 @@ export default function ScenarioRunner({ scenario }: { scenario: Scenario }) {
 
       {phase === "result" && feedback && (
         <>
+          <div className="rounded-xl bg-gradient-to-r from-brand-600 to-brand-800 p-6 text-center text-white shadow">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-100">
+              Completed
+            </p>
+            <h2 className="mt-2 text-xl font-bold">{scenario.title}</h2>
+            {getModule(scenario.moduleId) && (
+              <p className="text-sm text-brand-100">
+                {getModule(scenario.moduleId)!.title.replace(/ Academy$/, "")}
+              </p>
+            )}
+            <p className="mt-4 text-4xl font-extrabold">
+              {feedback.totalScore}
+              <span className="ml-1 text-lg font-medium text-brand-100">
+                /100
+              </span>
+            </p>
+            <p className="mt-4 text-sm font-semibold">
+              CarePhrase Communication Academy
+            </p>
+            <p className="text-xs text-brand-100">comms.carephrase.com</p>
+          </div>
+
           <FeedbackCard feedback={feedback} transcript={transcript} />
           <div className="flex flex-wrap justify-center gap-3">
             <button
