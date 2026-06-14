@@ -4,10 +4,21 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { MODULES } from "@/lib/scenarios";
 import InstallPrompt from "@/components/InstallPrompt";
+import PilotAccessForm from "@/components/PilotAccessForm";
 
-// Canonical + og:url for the public landing page. Both resolve against
-// metadataBase (siteUrl), so they follow the production domain automatically.
+// Canonical + og:url resolve against metadataBase (siteUrl) so they follow the
+// production domain automatically. Description + keywords target the platform's
+// core search terms.
 export const metadata: Metadata = {
+  description:
+    "Care communication training for UK health and social care staff — practise handover, escalation and safeguarding communication and care English by voice, with AI feedback. Request pilot access for your organisation.",
+  keywords: [
+    "care communication training",
+    "healthcare communication skills",
+    "care worker communication training",
+    "safeguarding communication training",
+    "handover communication training UK",
+  ],
   alternates: { canonical: "/" },
   openGraph: { url: "/" },
 };
@@ -37,10 +48,16 @@ export default async function Home() {
           staff. Practise real workplace scenarios by voice and get structured,
           scored feedback.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <a
+            href="#request-pilot-access"
+            className="rounded-full bg-brand-600 px-6 py-3 font-medium text-white shadow hover:bg-brand-700"
+          >
+            Request Pilot Access
+          </a>
           <Link
             href="/signup"
-            className="rounded-full bg-brand-600 px-6 py-3 font-medium text-white shadow hover:bg-brand-700"
+            className="rounded-full border border-slate-300 px-6 py-3 font-medium text-slate-700 hover:bg-slate-50"
           >
             Get started
           </Link>
@@ -61,7 +78,7 @@ export default async function Home() {
         {MODULES.map((m) => (
           <div
             key={m.id}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
           >
             <div
               className={`mb-4 h-2 w-12 rounded-full bg-gradient-to-r ${m.accent}`}
@@ -70,15 +87,70 @@ export default async function Home() {
             <p className="mt-1 text-sm font-medium text-brand-600">
               {m.tagline}
             </p>
-            <p className="mt-2 text-sm text-slate-600">{m.description}</p>
+            <p className="mt-2 flex-1 text-sm text-slate-600">{m.description}</p>
             {!m.available && (
-              <span className="mt-3 inline-block rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
+              <span className="mt-3 inline-block self-start rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
                 Coming soon
               </span>
             )}
+            <a
+              href="#request-pilot-access"
+              className="mt-4 inline-block text-sm font-medium text-brand-600 hover:underline"
+            >
+              Request pilot access →
+            </a>
           </div>
         ))}
       </div>
+
+      {/* SEO content */}
+      <section className="mt-20 border-t border-slate-200 pt-12">
+        <h2 className="text-2xl font-bold text-slate-900">
+          Communication training built for health and social care
+        </h2>
+        <div className="mt-4 grid gap-6 text-sm leading-relaxed text-slate-600 sm:grid-cols-2">
+          <p>
+            CarePhrase Communication Academy provides{" "}
+            <strong>care communication training</strong> and practical{" "}
+            <strong>healthcare communication skills</strong> practice for
+            frontline teams. Learners rehearse real workplace conversations by
+            voice and receive structured, scored AI feedback — turning theory
+            into confident, day-to-day communication.
+          </p>
+          <p>
+            From <strong>care worker communication training</strong> for new
+            starters and international staff, to{" "}
+            <strong>safeguarding communication training</strong> and structured{" "}
+            <strong>handover communication training in the UK</strong>, each
+            Academy targets the conversations that keep people safe: handovers,
+            escalation, safeguarding disclosures and clear professional
+            language.
+          </p>
+        </div>
+      </section>
+
+      {/* Request Pilot Access */}
+      <section
+        id="request-pilot-access"
+        className="mt-20 scroll-mt-8 border-t border-slate-200 pt-12"
+      >
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-2xl font-bold text-slate-900">
+            Request Pilot Access
+          </h2>
+          <p className="mt-3 text-slate-600">
+            Interested in piloting CarePhrase Communication Academy in your
+            organisation?
+          </p>
+          <p className="mt-2 text-slate-600">
+            Complete the form and our team will contact you to discuss
+            suitability, training objectives and pilot availability.
+          </p>
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <PilotAccessForm />
+          </div>
+        </div>
+      </section>
 
       <p className="mx-auto mt-12 max-w-2xl text-center text-xs text-slate-400">
         Training and professional development tool only. Not clinical decision

@@ -85,3 +85,34 @@ create policy "Users can insert own attempts"
 grant usage on schema public to authenticated;
 grant select, insert, update on public.profiles to authenticated;
 grant select, insert on public.attempts to authenticated;
+
+-- ---------------------------------------------------------------------------
+-- pilot_access_requests: public lead-capture form (no login required).
+-- Anyone may INSERT a request; nobody may read them via the API — leads are
+-- viewed in the Supabase dashboard (service role bypasses RLS).
+-- ---------------------------------------------------------------------------
+create table if not exists public.pilot_access_requests (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  full_name text not null,
+  job_title text not null,
+  organisation_name text not null,
+  work_email text not null,
+  phone_number text,
+  organisation_type text not null,
+  staff_count text not null,
+  academy_interest text not null,
+  additional_information text,
+  consent boolean not null default false
+);
+
+alter table public.pilot_access_requests enable row level security;
+
+-- Allow inserts from logged-out (anon) and logged-in (authenticated) visitors.
+grant insert on public.pilot_access_requests to anon, authenticated;
+
+drop policy if exists "Anyone can submit a pilot request" on public.pilot_access_requests;
+create policy "Anyone can submit a pilot request"
+  on public.pilot_access_requests for insert
+  to anon, authenticated
+  with check (consent = true);
