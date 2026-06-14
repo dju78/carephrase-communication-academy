@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { MODULES, getScenario, SCENARIOS } from "@/lib/scenarios";
 import Nav from "@/components/Nav";
+import { FEEDBACK_FORM_URL } from "@/lib/constants";
 import type { Attempt } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -99,6 +100,25 @@ export default async function DashboardPage() {
               );
             })}
           </div>
+        </section>
+
+        {/* Pilot feedback */}
+        <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-lg font-semibold text-slate-800">
+            Pilot Feedback
+          </h2>
+          <p className="mt-1 text-slate-600">
+            Help us improve CarePhrase Communication Academy by sharing your
+            experience.
+          </p>
+          <a
+            href={FEEDBACK_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block rounded-full bg-brand-600 px-5 py-2.5 font-medium text-white hover:bg-brand-700"
+          >
+            Complete Feedback Survey
+          </a>
         </section>
 
         {/* Recommendations */}

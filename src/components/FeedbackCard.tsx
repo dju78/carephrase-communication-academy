@@ -1,6 +1,7 @@
 import type { Feedback } from "@/lib/types";
 import Scorecard, { ScoreRing } from "./Scorecard";
 import Disclaimer from "./Disclaimer";
+import ExerciseFeedbackPrompt from "./ExerciseFeedbackPrompt";
 
 export default function FeedbackCard({
   feedback,
@@ -72,6 +73,8 @@ export default function FeedbackCard({
       </details>
 
       <Disclaimer />
+
+      <ExerciseFeedbackPrompt />
     </div>
   );
 }

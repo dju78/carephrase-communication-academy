@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { FEEDBACK_FORM_URL } from "@/lib/constants";
 
 export default function Nav({ email }: { email?: string | null }) {
   const router = useRouter();
@@ -31,6 +32,14 @@ export default function Nav({ email }: { email?: string | null }) {
           >
             Dashboard
           </Link>
+          <a
+            href={FEEDBACK_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-600 hover:text-slate-900"
+          >
+            💬 Feedback
+          </a>
           {email && (
             <span className="hidden text-slate-400 sm:inline">{email}</span>
           )}
