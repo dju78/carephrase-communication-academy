@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://carephrase-communication-academy.vercel.app"),
@@ -21,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB">
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="flex min-h-screen flex-col antialiased">
+        <div className="flex-1">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
