@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { MODULES } from "@/lib/scenarios";
+
+// Canonical + og:url for the public landing page. Both resolve against
+// metadataBase (siteUrl), so they follow the production domain automatically.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 export default async function Home() {
   // If Supabase is configured and the user is signed in, go to the dashboard.
