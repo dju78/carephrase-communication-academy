@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { MODULES } from "@/lib/scenarios";
+import InstallPrompt from "@/components/InstallPrompt";
 
 // Canonical + og:url for the public landing page. Both resolve against
 // metadataBase (siteUrl), so they follow the production domain automatically.
@@ -50,6 +51,10 @@ export default async function Home() {
             Sign in
           </Link>
         </div>
+      </div>
+
+      <div className="mx-auto max-w-md text-left">
+        <InstallPrompt />
       </div>
 
       <div className="mt-16 grid gap-6 md:grid-cols-3">
