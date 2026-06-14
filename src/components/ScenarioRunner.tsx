@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import VoiceRecorder from "./VoiceRecorder";
 import FeedbackCard from "./FeedbackCard";
 import Disclaimer from "./Disclaimer";
+import { exampleFor } from "@/lib/scenarios";
 import type { Feedback, Scenario } from "@/lib/types";
 
 type Phase = "record" | "processing" | "result";
@@ -98,6 +99,7 @@ export default function ScenarioRunner({ scenario }: { scenario: Scenario }) {
 
       {phase !== "result" && (
         <>
+          <ExampleGuide example={exampleFor(scenario)} />
           <VoiceRecorder
             onSubmit={handleSubmit}
             isProcessing={phase === "processing"}
@@ -129,5 +131,60 @@ export default function ScenarioRunner({ scenario }: { scenario: Scenario }) {
         </>
       )}
     </div>
+  );
+}
+
+/**
+ * "Example of what to say" — a guide, not a model answer. Collapsed by default
+ * so it supports learners without inviting them to copy word-for-word.
+ */
+function ExampleGuide({
+  example,
+}: {
+  example: { include: string[]; phrase: string } | null;
+}) {
+  if (!example) return null;
+  return (
+    <details className="rounded-xl border border-slate-200 bg-slate-50 p-5">
+      <summary className="cursor-pointer font-semibold text-slate-800">
+        💬 Example of what to say
+      </summary>
+
+      <div className="mt-4 space-y-4">
+        <div>
+          <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+            What to include
+          </h4>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-700">
+            {example.include.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+            Example phrase
+          </h4>
+          <blockquote className="border-l-4 border-brand-300 bg-white px-4 py-3 text-sm italic text-slate-700">
+            &ldquo;{example.phrase}&rdquo;
+          </blockquote>
+        </div>
+
+        <div>
+          <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+            Your turn
+          </h4>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-700">
+            <li>Record your own response.</li>
+            <li>Try not to copy word-for-word.</li>
+          </ul>
+          <p className="mt-3 rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+            Use this as a guide. Your response should reflect the actual
+            situation.
+          </p>
+        </div>
+      </div>
+    </details>
   );
 }
