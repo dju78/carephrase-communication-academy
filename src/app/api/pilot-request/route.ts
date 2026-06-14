@@ -30,9 +30,9 @@ function escapeHtml(s: string) {
  * No-ops if RESEND_API_KEY is not configured. From/To are env-configurable so
  * the sender can switch to a verified domain address without a code change.
  */
-async function notifyAdmin(lead: Lead) {
+async function notifyAdmin(lead: Lead): Promise<"sent" | "skipped"> {
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  if (!apiKey) return; // not configured — skip silently
+  if (!apiKey) return "skipped"; // not configured — skip silently
 
   const to = process.env.PILOT_NOTIFY_TO || "dju78@omoyelejd.co.uk";
   // Until the sending domain is verified in Resend, fall back to Resend's
@@ -83,6 +83,7 @@ ${rows
     const detail = await res.text().catch(() => "");
     throw new Error(`Resend ${res.status}: ${detail.slice(0, 200)}`);
   }
+  return "sent";
 }
 
 export async function POST(request: Request) {
@@ -162,9 +163,11 @@ export async function POST(request: Request) {
     }
 
     // Best-effort admin notification — the lead is already saved, so an email
-    // failure (or missing config) must never fail the request.
+    // failure (or missing config) must never fail the request. `notified`
+    // exposes the dispatch outcome for diagnostics/verification.
+    let notified: "sent" | "skipped" | "failed" = "skipped";
     try {
-      await notifyAdmin({
+      notified = await notifyAdmin({
         fullName,
         jobTitle,
         organisationName,
@@ -177,9 +180,10 @@ export async function POST(request: Request) {
       });
     } catch (notifyErr) {
       console.error("Admin notification failed:", notifyErr);
+      notified = "failed";
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, notified });
   } catch (err) {
     console.error("Pilot request error:", err);
     return NextResponse.json(
