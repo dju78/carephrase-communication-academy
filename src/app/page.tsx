@@ -11,7 +11,7 @@ import PilotAccessForm from "@/components/PilotAccessForm";
 // core search terms.
 export const metadata: Metadata = {
   description:
-    "Care communication training for UK health and social care staff — practise handover, escalation and safeguarding communication and care English by voice, with AI feedback. Request pilot access for your organisation.",
+    "Care communication training for UK health and social care staff: practise handovers, escalation and safeguarding by voice and get instant AI feedback.",
   keywords: [
     "care communication training",
     "healthcare communication skills",
