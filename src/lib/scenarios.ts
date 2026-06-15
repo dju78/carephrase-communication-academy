@@ -9,6 +9,8 @@ export interface ModuleMeta {
   accent: string;
   /** Whether this module is fully implemented in the MVP foundation. */
   available: boolean;
+  /** "Learners will…" outcomes shown on the homepage academy cards. */
+  outcomes: string[];
 }
 
 export const MODULES: ModuleMeta[] = [
@@ -20,6 +22,12 @@ export const MODULES: ModuleMeta[] = [
       "Practise giving clear end-of-shift and clinical handovers. The AI assessor scores clarity, completeness, professional language, risk communication and structure.",
     accent: "from-brand-500 to-brand-700",
     available: true,
+    outcomes: [
+      "Structure clear and professional handovers",
+      "Prioritise key risks and changes in condition",
+      "Communicate essential information with confidence",
+      "Reduce omissions during shift-to-shift communication",
+    ],
   },
   {
     id: "escalation",
@@ -29,6 +37,12 @@ export const MODULES: ModuleMeta[] = [
       "Practise escalating concerns using the Observation → Concern → Action Taken → Escalation Required framework.",
     accent: "from-emerald-500 to-emerald-700",
     available: true,
+    outcomes: [
+      "Recognise when concerns need escalation",
+      "Explain risks clearly to senior staff or clinicians",
+      "Use calm, professional and appropriate language",
+      "Practise speaking up when something feels unsafe",
+    ],
   },
   {
     id: "safeguarding",
@@ -38,6 +52,12 @@ export const MODULES: ModuleMeta[] = [
       "Practise responding to disclosures and raising safeguarding concerns — assessed on appropriate response, professional boundaries, information gathering and reporting procedures.",
     accent: "from-rose-500 to-rose-700",
     available: true,
+    outcomes: [
+      "Identify possible safeguarding concerns",
+      "Communicate concerns factually and sensitively",
+      "Avoid assumptions or emotional language",
+      "Understand when to report concerns through the correct channel",
+    ],
   },
   {
     id: "care-english",
@@ -47,6 +67,12 @@ export const MODULES: ModuleMeta[] = [
       "Vocabulary, pronunciation and confidence practice with short AI feedback on language and terminology use.",
     accent: "from-amber-500 to-amber-700",
     available: true,
+    outcomes: [
+      "Improve everyday workplace communication",
+      "Practise care-related vocabulary and phrases",
+      "Build confidence when speaking with residents, families and colleagues",
+      "Communicate more clearly in common care situations",
+    ],
   },
 ];
 

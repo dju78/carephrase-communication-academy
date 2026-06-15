@@ -87,18 +87,33 @@ export default async function Home() {
             <p className="mt-1 text-sm font-medium text-brand-600">
               {m.tagline}
             </p>
-            <p className="mt-2 flex-1 text-sm text-slate-600">{m.description}</p>
+            <p className="mt-2 text-sm text-slate-600">{m.description}</p>
+
+            <div className="mt-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Learners will
+              </p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+                {m.outcomes.map((o, i) => (
+                  <li key={i}>{o}</li>
+                ))}
+              </ul>
+            </div>
+
             {!m.available && (
               <span className="mt-3 inline-block self-start rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
                 Coming soon
               </span>
             )}
-            <a
-              href="#request-pilot-access"
-              className="mt-4 inline-block text-sm font-medium text-brand-600 hover:underline"
-            >
-              Request pilot access →
-            </a>
+
+            <div className="mt-auto pt-6">
+              <a
+                href="#request-pilot-access"
+                className="inline-block rounded-full border border-brand-600 px-4 py-1.5 text-sm font-medium text-brand-700 hover:bg-brand-50"
+              >
+                Request pilot access
+              </a>
+            </div>
           </div>
         ))}
       </div>
