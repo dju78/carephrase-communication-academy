@@ -23,6 +23,41 @@ export const metadata: Metadata = {
   openGraph: { url: "/" },
 };
 
+const PROVIDER_BENEFITS = [
+  {
+    title: "Improved Communication",
+    body: "Help staff communicate more clearly during handovers, escalation conversations and day-to-day care interactions.",
+  },
+  {
+    title: "Reduced Misunderstandings",
+    body: "Structured communication practice helps reduce avoidable misunderstandings between team members.",
+  },
+  {
+    title: "Better Documentation Quality",
+    body: "By strengthening communication skills, staff are better prepared to record and share information accurately and consistently.",
+  },
+  {
+    title: "Enhanced Staff Confidence",
+    body: "Provide a safe environment where staff can practise workplace communication before real situations occur.",
+  },
+  {
+    title: "Support for Induction Training",
+    body: "Useful for onboarding new staff, overseas recruits and team members who would benefit from additional communication practice.",
+  },
+  {
+    title: "Consistent Training Experience",
+    body: "Deliver a structured communication training approach across multiple teams and locations.",
+  },
+  {
+    title: "Supports Professional Development",
+    body: "Encourage continuous learning and reflective practice through realistic workplace scenarios and feedback.",
+  },
+  {
+    title: "Scalable Workforce Development",
+    body: "Provide communication training support without requiring additional classroom sessions or trainer time.",
+  },
+];
+
 export default async function Home() {
   // If Supabase is configured and the user is signed in, go to the dashboard.
   if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
@@ -148,59 +183,54 @@ export default async function Home() {
       <section className="mt-20 border-t border-slate-200 pt-12">
         <h2 className="text-2xl font-bold text-slate-900">For Care Providers</h2>
         <p className="mt-3 max-w-3xl text-slate-600">
-          CarePhrase Communication Academy supports communication skills
-          development across health and social care teams.
+          CarePhrase Communication Academy is designed to support communication
+          skills development across health and social care teams.
         </p>
 
-        <div className="mt-8 grid gap-8 md:grid-cols-2">
-          <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Benefits
-            </h3>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-600">
-              {[
-                "Improved communication during handovers, escalation conversations and day-to-day care interactions",
-                "Reduced misunderstandings between team members",
-                "Better documentation quality through clearer communication",
-                "Enhanced staff confidence before real workplace situations",
-                "Support for induction training, especially for new staff and overseas recruits",
-                "Consistent training experience across teams and locations",
-                "Professional development through realistic workplace scenarios and feedback",
-                "Scalable workforce development without relying only on classroom sessions",
-              ].map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-              Suitable for
-            </h3>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {[
-                "Care homes",
-                "Supported living services",
-                "Home care providers",
-                "NHS and healthcare teams",
-                "Training providers",
-                "Adult social care organisations",
-              ].map((s) => (
-                <li
-                  key={s}
-                  className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
-                >
-                  {s}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <h3 className="mt-8 text-lg font-semibold text-slate-800">
+          Benefits for Care Providers
+        </h3>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {PROVIDER_BENEFITS.map((b) => (
+            <div
+              key={b.title}
+              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
+            >
+              <h4 className="font-semibold text-slate-800">{b.title}</h4>
+              <p className="mt-1 text-sm text-slate-600">{b.body}</p>
+            </div>
+          ))}
         </div>
 
+        <h3 className="mt-10 text-lg font-semibold text-slate-800">
+          Suitable for
+        </h3>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {[
+            "Care Homes",
+            "Supported Living Services",
+            "Home Care Providers",
+            "NHS and Healthcare Teams",
+            "Training Providers",
+            "Adult Social Care Organisations",
+          ].map((s) => (
+            <li
+              key={s}
+              className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
+            >
+              {s}
+            </li>
+          ))}
+        </ul>
+
         <div className="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-6 text-center">
-          <p className="text-slate-700">
+          <p className="font-medium text-slate-800">
             Interested in exploring how CarePhrase could support your
             organisation?
+          </p>
+          <p className="mx-auto mt-1 max-w-xl text-sm text-slate-600">
+            Request pilot access to discuss your training objectives and pilot
+            suitability.
           </p>
           <a
             href="#request-pilot-access"
