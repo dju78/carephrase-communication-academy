@@ -4,6 +4,8 @@ import { FEEDBACK_FORM_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us · CarePhrase Communication Academy",
+  description:
+    "Get in touch with CarePhrase Communication Academy for support, pilot access, or questions about our care communication training for UK health and social care teams.",
 };
 
 export default function ContactPage() {

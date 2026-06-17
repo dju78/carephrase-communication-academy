@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Install CarePhrase · CarePhrase Communication Academy",
+  description:
+    "Install CarePhrase Communication Academy as an app on your phone or tablet for quick access to voice-based care communication training and instant AI feedback.",
 };
 
 export default function InstallPage() {

@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Accessibility · CarePhrase Communication Academy",
+  description:
+    "CarePhrase Communication Academy's accessibility commitment: how we make voice-based care communication training usable for all UK health and social care staff.",
 };
 
 export default function AccessibilityPage() {

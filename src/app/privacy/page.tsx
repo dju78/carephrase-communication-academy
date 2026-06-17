@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy · CarePhrase Communication Academy",
+  description:
+    "How CarePhrase Communication Academy collects, uses, and protects personal data for UK health and social care staff using our communication training platform.",
 };
 
 export default function PrivacyPage() {
