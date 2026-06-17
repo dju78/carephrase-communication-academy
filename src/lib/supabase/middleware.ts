@@ -47,6 +47,10 @@ export async function updateSession(request: NextRequest) {
   const isProtected =
     pathname.startsWith("/dashboard") || pathname.startsWith("/modules");
   const isAuthPage = pathname === "/login" || pathname === "/signup";
+  // Signed-in users have no need for the marketing homepage; send them to the
+  // dashboard. Handled here (not in the page) so the homepage stays a static,
+  // non-async server component and its metadata renders inside <head>.
+  const isHome = pathname === "/";
 
   if (!user && isProtected) {
     const url = request.nextUrl.clone();
@@ -55,7 +59,7 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  if (user && isAuthPage) {
+  if (user && (isAuthPage || isHome)) {
     const url = request.nextUrl.clone();
     url.pathname = "/dashboard";
     return NextResponse.redirect(url);

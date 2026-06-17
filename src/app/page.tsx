@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
 import { MODULES } from "@/lib/scenarios";
 import InstallPrompt from "@/components/InstallPrompt";
 import PilotAccessForm from "@/components/PilotAccessForm";
@@ -58,16 +56,10 @@ const PROVIDER_BENEFITS = [
   },
 ];
 
-export default async function Home() {
-  // If Supabase is configured and the user is signed in, go to the dashboard.
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    const supabase = await createClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-    if (user) redirect("/dashboard");
-  }
-
+export default function Home() {
+  // Signed-in users are redirected to /dashboard by middleware (see
+  // src/lib/supabase/middleware.ts). Keeping this page synchronous ensures
+  // Next.js renders its metadata in <head> rather than streaming it into <body>.
   return (
     <main className="mx-auto max-w-5xl px-4 py-16">
       <div className="text-center">
