@@ -1,10 +1,27 @@
 # CarePhrase Communication Academy
 
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![React](https://img.shields.io/badge/React-19-61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-green)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 AI-powered communication training platform for UK health and social care staff. Learners practise real workplace communication scenarios by voice and receive structured, scored feedback.
 
 > **Training tool only.** CarePhrase does not provide clinical advice, replace professional judgement, or generate official care records, and it is not a medical device.
 
 This repository is the **MVP (Version 1)** foundation.
+
+## 🌐 Live Demo
+
+**Application:** [https://comms.carephrase.com](https://comms.carephrase.com)
+
+### Purpose
+
+CarePhrase Communication Academy helps UK health and social care professionals improve workplace communication through realistic, AI-assisted practice scenarios.
+
+Learners receive structured feedback on clarity, completeness, professional language, safety awareness, and communication quality to support continuous learning.
 
 ## What's built
 
@@ -95,12 +112,18 @@ supabase/schema.sql               # Database schema + RLS
 
 For a staging environment, use Vercel's Preview deployments (every branch/PR) or a dedicated `staging` branch with its own Supabase project.
 
-## Adding the remaining modules
+## Roadmap
 
-Module 2 and 3 follow the exact same pattern as Handover:
+Planned development includes:
 
-1. Add scenarios to `SCENARIOS` in `src/lib/scenarios.ts` with the new `moduleId`.
-2. Flip the module's `available` flag to `true` in `MODULES`.
-3. For Escalation, adjust the system prompt in `src/lib/openai.ts` to assess against **Observation → Concern → Action Taken → Escalation Required**.
+- Escalation Communication Academy
+- Care English Academy
+- Safeguarding Communication Academy
+- Emergency Communication Academy
+- Family Communication Practice
+- Interview Practice
+- Manager Dashboard
+- Organisation Analytics
+- Team Reporting
 
-The recording, transcription, feedback, persistence, and dashboard layers are module-agnostic and need no changes.
+The platform has been designed with a modular architecture, allowing new communication training modules to be added without significant changes to the core recording, transcription, AI feedback, persistence, and dashboard components.
