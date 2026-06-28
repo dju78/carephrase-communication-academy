@@ -1,14 +1,25 @@
 # CarePhrase Communication Academy
 
+AI-powered communication training platform that helps UK health and social care professionals practise structured handovers, escalation, safeguarding communication, and workplace English using realistic AI feedback.
+
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![React](https://img.shields.io/badge/React-19-61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Supabase](https://img.shields.io/badge/Supabase-Backend-green)
+![Supabase](https://img.shields.io/badge/Supabase-Node.js-green)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 🌐 **Live Demo:** https://comms.carephrase.com  
 🏢 **Portfolio:** https://daramolajo.co.uk
+
+## Highlights
+
+- 🎙️ Voice-based communication practice
+- 🤖 AI-powered personalised feedback
+- 📊 Learner progress dashboard
+- 🛡️ Safeguarding communication scenarios
+- 📞 Escalation and handover practice
+- 📱 Mobile-friendly interface
 
 ![CarePhrase Communication Academy Dashboard](public/academy-dashboard.png)
 
