@@ -7,6 +7,15 @@
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+🌐 **Live Demo:** https://comms.carephrase.com  
+🏢 **Portfolio:** https://daramolajo.co.uk
+
+![CarePhrase Communication Academy Dashboard](public/academy-dashboard.png)
+
+---
+
+> **CarePhrase Communication Academy dashboard** – AI-powered communication training platform for UK health and social care professionals. Learners practise structured handovers, escalation, safeguarding communication, and UK care English while tracking their progress through an interactive dashboard.
+
 AI-powered communication training platform for UK health and social care staff. Learners practise real workplace communication scenarios by voice and receive structured, scored feedback.
 
 > **Training tool only.** CarePhrase does not provide clinical advice, replace professional judgement, or generate official care records, and it is not a medical device.
